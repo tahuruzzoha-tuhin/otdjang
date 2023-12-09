@@ -91,13 +91,14 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DEVELOPMENT_MODE = True
 # DEVELOPMENT_MODE = False
 
-if DEVELOPMENT_MODE is True:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
+DATABASES = {}
+# if DEVELOPMENT_MODE is True:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }
 # elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
 #     DATABASES = {
 #         'default': {
