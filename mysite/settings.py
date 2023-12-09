@@ -88,8 +88,8 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DEVELOPMENT_MODE = True
-DEVELOPMENT_MODE = False
+DEVELOPMENT_MODE = True
+# DEVELOPMENT_MODE = False
 
 if DEVELOPMENT_MODE is True:
     DATABASES = {
@@ -98,17 +98,17 @@ if DEVELOPMENT_MODE is True:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
-elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'tahuruzzoha-db',
-            'USER': 'postgres',
-            'PASSWORD': 'R$HTUMW@fMVh4AE',
-            'HOST': 'db.wpwjvnrsdjovtxryjnve.supabase.co',  # Use the service name
-            'PORT': '5432',
-        }
-    }
+# elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql',
+#             'NAME': 'tahuruzzoha-db',
+#             'USER': 'postgres',
+#             'PASSWORD': 'R$HTUMW@fMVh4AE',
+#             'HOST': 'db.wpwjvnrsdjovtxryjnve.supabase.co',  # Use the service name
+#             'PORT': '5432',
+#         }
+#     }
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
